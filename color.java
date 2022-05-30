@@ -163,7 +163,12 @@ public class color extends JFrame implements KeyListener, Runnable{
 		}
 
 
-		twoDGraph.drawImage(back, null, 0, 0);
+        if (characters.size() == 0) {
+            characters = new ArrayList<>();
+            enemies = new ArrayList<>();
+            characters.add(new Smiley(100, 1, 100, 100, "SIDEWAYS",getWidth(),getHeight()));
+        }
+        twoDGraph.drawImage(back, null, 0, 0);  
 		repaint();
 	}
 
