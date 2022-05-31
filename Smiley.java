@@ -74,16 +74,16 @@ public class Smiley {
         if (direction.equals("DOWN")) {
             yloc += speed;
         }
-        if (yloc > boundaryY - size) {
+        if (yloc + size/2> boundaryY) {
             yloc -= speed;
         }
-        if (xloc > boundaryX - size) {
+        if (xloc + size/2> boundaryX) {
             xloc -= speed;
         }
-        if (yloc < 0) {
+        if (yloc + size/2 < 0) {
             yloc += speed;
         }
-        if (xloc < 0) {
+        if (xloc + size/2 < 0) {
             xloc += speed;
         }
         if (x > 250 && size > 10) {
@@ -100,7 +100,7 @@ public class Smiley {
         temp.add(original);
         if (splitDirection.equals("SIDEWAYS")) {
             xloc += size/2.0;
-            temp.add(new Smiley(size, isHappy + 1, (int)xloc - size, (int)yloc, splitDirection, boundaryX, boundaryY));
+            temp.add(new Smiley(size, (isHappy + 1)%3, (int)xloc - size, (int)yloc, splitDirection, boundaryX, boundaryY));
         }
         else {
             yloc += size/2.0;
