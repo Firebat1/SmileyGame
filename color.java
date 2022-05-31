@@ -104,9 +104,13 @@ public class color extends JFrame implements KeyListener, Runnable{
 			doCombine = false;
 			for (Smiley i: characters) {
 				averageXLoc += i.getXLoc();
+				averageXLoc += i.getSize()/2;
 				averageYLoc += i.getYLoc();
+				averageYLoc += i.getSize()/2;
 				totalSize += i.getSize();
 			}
+			averageXLoc -= totalSize;
+			averageYLoc -= totalSize;
 			for (int i = 0; i < characters.size(); i ++) {
 				reduceSpeed *= 2;
 			}
