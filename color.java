@@ -54,7 +54,7 @@ public class color extends JFrame implements KeyListener, Runnable{
 		Graphics graphToBack = back.createGraphics();
 
 		g.setColor(Color.black);
-		graphToBack.fillRect(0, 0, getWidth(), getHeight());
+		graphToBack.fillRect(0, 0, 2000, 1600);
 		for (int i = 0; i < enemies.size(); i ++) {
 			Enemy j = enemies.get(i).split();
 			if (j != null) {
