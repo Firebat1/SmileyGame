@@ -96,6 +96,8 @@ public class Smiley {
         x = 0;
         isSplitting = true;
         ArrayList<Smiley> temp = new ArrayList<>();
+        yloc += size/4;
+        xloc += size/4;
         size /= 2;
         temp.add(original);
         if (splitDirection.equals("SIDEWAYS")) {
